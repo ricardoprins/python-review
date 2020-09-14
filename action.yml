@@ -1,0 +1,11 @@
+name: 'python-review'
+inputs:
+  filename:
+    description: 'filename'
+    required: true
+    default: 'test.py'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.filename }}
